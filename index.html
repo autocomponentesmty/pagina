@@ -33,13 +33,13 @@
       position: sticky;
       top: 0;
       z-index: 100;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
     }
     header .logo {
       font-size: 1.5rem;
       font-weight: bold;
-    }
-    nav {
-      margin-top: 0.5rem;
     }
     nav ul {
       list-style: none;
@@ -154,10 +154,6 @@
       margin-bottom: 0.5rem;
       font-size: 1rem;
     }
-    .tarjeta-producto p {
-      font-size: 0.9rem;
-      color: #555;
-    }
     .ver-inventario {
       display: block;
       margin: 2rem auto 0;
@@ -213,55 +209,40 @@
       color: #555;
     }
 
-    /* -- Sección Contacto -- */
+    /* -- Sección Contacto (solo botones) -- */
     .contacto {
       padding: 4rem 2rem;
+      text-align: center;
     }
     .contacto h2 {
-      text-align: center;
       margin-bottom: 2rem;
       font-size: 2rem;
     }
-    .contacto-form {
-      max-width: 500px;
-      margin: 0 auto;
+    .botones-contacto {
       display: flex;
-      flex-direction: column;
-      gap: 1rem;
+      justify-content: center;
+      gap: 1.5rem;
+      flex-wrap: wrap;
     }
-    .contacto-form input,
-    .contacto-form textarea {
-      width: 100%;
-      padding: 0.8rem;
-      border: 1px solid #ccc;
-      border-radius: 4px;
-      font-size: 0.95rem;
-    }
-    .contacto-form button {
-      background: #27ae60;
-      color: #fff;
-      padding: 0.75rem;
-      border: none;
-      border-radius: 4px;
-      cursor: pointer;
-    }
-    .contacto-form button:hover {
-      background: #1e8c4a;
-    }
-    .btn-whatsapp {
-      display: block;
-      margin: 2rem auto 0;
-      text-align: center;
-    }
-    .btn-whatsapp a {
+    .botones-contacto a {
       background: #25d366;
       color: #fff;
       padding: 0.7rem 1.4rem;
       border-radius: 4px;
       font-size: 1rem;
+      display: inline-block;
     }
-    .btn-whatsapp a:hover {
-      background: #1ebc59;
+    .botones-contacto a.facebook {
+      background: #3b5998;
+    }
+    .botones-contacto a.instagram {
+      background: #E1306C;
+    }
+    .botones-contacto a.whatsapp {
+      background: #25d366;
+    }
+    .botones-contacto a:hover {
+      opacity: 0.9;
     }
 
     /* -- Footer -- */
@@ -320,27 +301,27 @@
     <div class="cards">
       <div class="card-servicio">
         <h3>🛢️ Cambio de Aceite</h3>
-        <p>Servicio exprés en 1 día para renovar filtro y aceite。</p>
+        <p>Servicio exprés en 1 día para renovar filtro y aceite.</p>
       </div>
       <div class="card-servicio">
         <h3>🛞 Alineación y Balanceo</h3>
-        <p>Ajuste fino de suspensión y dirección para un manejo suave。</p>
+        <p>Ajuste fino de suspensión y dirección para un manejo suave.</p>
       </div>
       <div class="card-servicio">
         <h3>🛠️ Reemplazo de Frenos</h3>
-        <p>Cambio de balatas, discos y calibración profesional。</p>
+        <p>Cambio de balatas, discos y calibración profesional.</p>
       </div>
       <div class="card-servicio">
         <h3>🔌 Diagnóstico Computarizado</h3>
-        <p>Revisión electrónica completa para detectar fallas。</p>
+        <p>Revisión electrónica completa para detectar fallas.</p>
       </div>
       <div class="card-servicio">
         <h3>🔋 Cambio de Batería</h3>
-        <p>Sustitución rápida de batería automotriz con garantías。</p>
+        <p>Sustitución rápida de batería automotriz con garantías.</p>
       </div>
       <div class="card-servicio">
         <h3>🛠️ Reparación de Suspensión</h3>
-        <p>Cambio de amortiguadores y reparación de sistema de suspensión。</p>
+        <p>Cambio de amortiguadores y reparación de sistema de suspensión.</p>
       </div>
     </div>
   </section>
@@ -351,19 +332,15 @@
     <div class="grid-productos">
       <div class="tarjeta-producto">
         <h4>Cremallera EPS – FORD F-150 2010-2011</h4>
-        <p>Stock: 12</p>
       </div>
       <div class="tarjeta-producto">
         <h4>Cremallera EPS – VW VAG 2018-2020</h4>
-        <p>Stock: 8</p>
       </div>
       <div class="tarjeta-producto">
         <h4>Cremallera EPS – FORD MUSTANG 2016-2020</h4>
-        <p>Stock: 5</p>
       </div>
       <div class="tarjeta-producto">
         <h4>Cremallera EPS – CHEVROLET SILVERADO 2018-2023</h4>
-        <p>Stock: 6</p>
       </div>
     </div>
     <div class="ver-inventario">
@@ -378,46 +355,40 @@
       <div class="ventaja">
         <span>📦</span>
         <h3>Parte Original</h3>
-        <p>Garantía de calidad y compatibilidad con tu vehículo。</p>
+        <p>Garantía de calidad y compatibilidad con tu vehículo.</p>
       </div>
       <div class="ventaja">
         <span>⏱️</span>
         <h3>Entrega Rápida</h3>
-        <p>Envios en 24-48 horas en Monterrey y área metropolitana。</p>
+        <p>Envíos en 24-48 horas en Monterrey y área metropolitana.</p>
       </div>
       <div class="ventaja">
         <span>🤝</span>
         <h3>Soporte Personalizado</h3>
-        <p>Asesoría experta en la selección de refacciones ideales。</p>
+        <p>Asesoría experta en la selección de refacciones ideales.</p>
       </div>
     </div>
   </section>
 
-  <!-- CONTACTO -->
+  <!-- CONTACTO (solo botones a redes) -->
   <section class="contacto" id="contacto">
     <h2>Contáctanos</h2>
-    <form class="contacto-form" action="mailto:info@autocomponentesmty.com" method="post" enctype="text/plain">
-      <input type="text" name="Nombre" placeholder="Tu nombre completo" required />
-      <input type="email" name="Email" placeholder="Tu correo electrónico" required />
-      <textarea name="Mensaje" rows="4" placeholder="Escribe tu mensaje aquí..." required></textarea>
-      <button type="submit">Enviar Mensaje</button>
-    </form>
-    <div class="btn-whatsapp">
-      <a href="https://wa.me/52XXXXXXXXXX?text=¡Hola!%20Quiero%20más%20info" target="_blank">
-        Contáctanos por WhatsApp
-      </a>
+    <div class="botones-contacto">
+      <a class="facebook" href="https://facebook.com/AutoComponentesMty" target="_blank">Facebook</a>
+      <a class="instagram" href="https://instagram.com/AutoComponentesMty" target="_blank">Instagram</a>
+      <a class="whatsapp" href="https://wa.me/528130847980?text=¡Hola!%20Quisiera%20más%20información" target="_blank">WhatsApp</a>
     </div>
   </section>
 
   <!-- FOOTER -->
   <footer>
-    <p>Av. Ejemplo #123, Guadalupe, N.L. | Tel: (81) 1234-5678 | WhatsApp: (81) 9XXXXXXX</p>
-    <p>Email: info@autocomponentesmty.com</p>
+    <p>Dirección: Playa Mocambo 3547, La Primavera, 64830 Monterrey, N.L.</p>
+    <p>Tel: +52 81 3084 7980 | Email: <a href="mailto:autocomponentesmty@gmail.com">autocomponentesmty@gmail.com</a></p>
     <div class="redes">
-      <a href="https://facebook.com/tuempresa" target="_blank">Facebook</a> |
-      <a href="https://instagram.com/tuempresa" target="_blank">Instagram</a>
+      <a href="https://facebook.com/AutoComponentesMty" target="_blank">Facebook</a> |
+      <a href="https://instagram.com/AutoComponentesMty" target="_blank">Instagram</a>
     </div>
-    <p>© 2025 AutoComponentes Monterrey. Todos los derechos reservados。</p>
+    <p>© 2025 AutoComponentes Monterrey. Todos los derechos reservados.</p>
   </footer>
 
 </body>
