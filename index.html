@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AutoComponentes Monterrey</title>
+  <style>
+    /* Reset básico */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: 'Arial', sans-serif;
+      line-height: 1.6;
+      color: #333;
+    }
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+    img {
+      max-width: 100%;
+      display: block;
+    }
+
+    /* -- Header / Navegación -- */
+    header {
+      background: #0d0d0d;
+      color: white;
+      padding: 1rem 2rem;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+    header .logo {
+      font-size: 1.5rem;
+      font-weight: bold;
+    }
+    nav {
+      margin-top: 0.5rem;
+    }
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 1.5rem;
+    }
+    nav ul li a {
+      color: white;
+      font-weight: 500;
+    }
+    nav ul li a:hover {
+      text-decoration: underline;
+    }
+
+    /* -- Hero Section -- */
+    .hero {
+      background: url('https://images.pexels.com/photos/210019/pexels-photo-210019.jpeg?auto=compress') center/cover no-repeat;
+      height: 65vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      color: #fff;
+      text-align: center;
+      padding: 0 1rem;
+    }
+    .hero::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: rgba(0,0,0,0.5);
+    }
+    .hero .content {
+      position: relative;
+      z-index: 1;
+      max-width: 600px;
+    }
+    .hero h1 {
+      font-size: 2.5rem;
+      margin-bottom: 0.5rem;
+    }
+    .hero p {
+      font-size: 1.1rem;
+      margin-bottom: 1rem;
+    }
+    .btn-primario {
+      background: #27ae60;
+      color: #fff;
+      padding: 0.75rem 1.5rem;
+      font-size: 1rem;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+    .btn-primario:hover {
+      background: #1e8c4a;
+    }
+
+    /* -- Sección Servicios -- */
+    .servicios {
+      padding: 4rem 2rem;
+      background: #f9f9f9;
+    }
+    .servicios h2 {
+      text-align: center;
+      margin-bottom: 2rem;
+      font-size: 2rem;
+    }
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 1.5rem;
+    }
+    .card-servicio {
+      background: white;
+      border-radius: 6px;
+      padding: 1.5rem;
+      text-align: center;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    }
+    .card-servicio h3 {
+      margin-bottom: 0.75rem;
+      font-size: 1.2rem;
+    }
+    .card-servicio p {
+      font-size: 0.95rem;
+      color: #555;
+    }
+
+    /* -- Sección Inventario Destacado -- */
+    .inventario-destacado {
+      padding: 4rem 2rem;
+    }
+    .inventario-destacado h2 {
+      text-align: center;
+      margin-bottom: 2rem;
+      font-size: 2rem;
+    }
+    .grid-productos {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 1rem;
+    }
+    .tarjeta-producto {
+      background: #fff;
+      border: 1px solid #ddd;
+      border-radius: 6px;
+      padding: 1rem;
+      text-align: center;
+    }
+    .tarjeta-producto h4 {
+      margin-bottom: 0.5rem;
+      font-size: 1rem;
+    }
+    .tarjeta-producto p {
+      font-size: 0.9rem;
+      color: #555;
+    }
+    .ver-inventario {
+      display: block;
+      margin: 2rem auto 0;
+      text-align: center;
+    }
+    .ver-inventario a {
+      background: #2980b9;
+      color: #fff;
+      padding: 0.6rem 1.3rem;
+      border-radius: 4px;
+      font-size: 0.95rem;
+    }
+    .ver-inventario a:hover {
+      background: #1f638a;
+    }
+
+    /* -- Sección ¿Por qué elegirnos? -- */
+    .por-que {
+      padding: 4rem 2rem;
+      background: #f1f1f1;
+    }
+    .por-que h2 {
+      text-align: center;
+      margin-bottom: 2rem;
+      font-size: 2rem;
+    }
+    .ventajas {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1.5rem;
+      justify-content: center;
+    }
+    .ventaja {
+      background: white;
+      padding: 1.5rem;
+      border-radius: 6px;
+      text-align: center;
+      width: 200px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    }
+    .ventaja span {
+      font-size: 2rem;
+      display: block;
+      margin-bottom: 0.7rem;
+      color: #27ae60;
+    }
+    .ventaja h3 {
+      margin-bottom: 0.5rem;
+      font-size: 1.1rem;
+    }
+    .ventaja p {
+      font-size: 0.9rem;
+      color: #555;
+    }
+
+    /* -- Sección Contacto -- */
+    .contacto {
+      padding: 4rem 2rem;
+    }
+    .contacto h2 {
+      text-align: center;
+      margin-bottom: 2rem;
+      font-size: 2rem;
+    }
+    .contacto-form {
+      max-width: 500px;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+    .contacto-form input,
+    .contacto-form textarea {
+      width: 100%;
+      padding: 0.8rem;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      font-size: 0.95rem;
+    }
+    .contacto-form button {
+      background: #27ae60;
+      color: #fff;
+      padding: 0.75rem;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+    .contacto-form button:hover {
+      background: #1e8c4a;
+    }
+    .btn-whatsapp {
+      display: block;
+      margin: 2rem auto 0;
+      text-align: center;
+    }
+    .btn-whatsapp a {
+      background: #25d366;
+      color: #fff;
+      padding: 0.7rem 1.4rem;
+      border-radius: 4px;
+      font-size: 1rem;
+    }
+    .btn-whatsapp a:hover {
+      background: #1ebc59;
+    }
+
+    /* -- Footer -- */
+    footer {
+      background: #0d0d0d;
+      color: #bbb;
+      padding: 2rem;
+      text-align: center;
+    }
+    footer p {
+      margin-bottom: 0.5rem;
+      font-size: 0.9rem;
+    }
+    footer .redes a {
+      margin: 0 0.5rem;
+      color: #bbb;
+      font-size: 1.2rem;
+    }
+    footer .redes a:hover {
+      color: #fff;
+    }
+
+    @media (max-width: 600px) {
+      .hero h1 { font-size: 2rem; }
+      .hero p { font-size: 1rem; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- HEADER / NAV -->
+  <header>
+    <div class="logo">AutoComponentes Mty</div>
+    <nav>
+      <ul>
+        <li><a href="#servicios">Servicios</a></li>
+        <li><a href="#inventario">Inventario</a></li>
+        <li><a href="#por-que">¿Por qué elegirnos?</a></li>
+        <li><a href="#contacto">Contacto</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- HERO -->
+  <section class="hero" id="inicio">
+    <div class="content">
+      <h1>AutoComponentes Monterrey</h1>
+      <p>Encuentra partes originales y servicio exprés para mantener tu vehículo en marcha.</p>
+      <button class="btn-primario" onclick="location.href='#inventario'">Ver Inventario</button>
+    </div>
+  </section>
+
+  <!-- SERVICIOS -->
+  <section class="servicios" id="servicios">
+    <h2>Nuestros Servicios</h2>
+    <div class="cards">
+      <div class="card-servicio">
+        <h3>🛢️ Cambio de Aceite</h3>
+        <p>Servicio exprés en 1 día para renovar filtro y aceite。</p>
+      </div>
+      <div class="card-servicio">
+        <h3>🛞 Alineación y Balanceo</h3>
+        <p>Ajuste fino de suspensión y dirección para un manejo suave。</p>
+      </div>
+      <div class="card-servicio">
+        <h3>🛠️ Reemplazo de Frenos</h3>
+        <p>Cambio de balatas, discos y calibración profesional。</p>
+      </div>
+      <div class="card-servicio">
+        <h3>🔌 Diagnóstico Computarizado</h3>
+        <p>Revisión electrónica completa para detectar fallas。</p>
+      </div>
+      <div class="card-servicio">
+        <h3>🔋 Cambio de Batería</h3>
+        <p>Sustitución rápida de batería automotriz con garantías。</p>
+      </div>
+      <div class="card-servicio">
+        <h3>🛠️ Reparación de Suspensión</h3>
+        <p>Cambio de amortiguadores y reparación de sistema de suspensión。</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- INVENTARIO DESTACADO -->
+  <section class="inventario-destacado" id="inventario">
+    <h2>Inventario Destacado</h2>
+    <div class="grid-productos">
+      <div class="tarjeta-producto">
+        <h4>Cremallera EPS – FORD F-150 2010-2011</h4>
+        <p>Stock: 12</p>
+      </div>
+      <div class="tarjeta-producto">
+        <h4>Cremallera EPS – VW VAG 2018-2020</h4>
+        <p>Stock: 8</p>
+      </div>
+      <div class="tarjeta-producto">
+        <h4>Cremallera EPS – FORD MUSTANG 2016-2020</h4>
+        <p>Stock: 5</p>
+      </div>
+      <div class="tarjeta-producto">
+        <h4>Cremallera EPS – CHEVROLET SILVERADO 2018-2023</h4>
+        <p>Stock: 6</p>
+      </div>
+    </div>
+    <div class="ver-inventario">
+      <a href="https://tu-app-glide.o-url-dinamico">Ver todo el Inventario →</a>
+    </div>
+  </section>
+
+  <!-- ¿POR QUÉ ELEGIRNOS? -->
+  <section class="por-que" id="por-que">
+    <h2>¿Por qué elegirnos?</h2>
+    <div class="ventajas">
+      <div class="ventaja">
+        <span>📦</span>
+        <h3>Parte Original</h3>
+        <p>Garantía de calidad y compatibilidad con tu vehículo。</p>
+      </div>
+      <div class="ventaja">
+        <span>⏱️</span>
+        <h3>Entrega Rápida</h3>
+        <p>Envios en 24-48 horas en Monterrey y área metropolitana。</p>
+      </div>
+      <div class="ventaja">
+        <span>🤝</span>
+        <h3>Soporte Personalizado</h3>
+        <p>Asesoría experta en la selección de refacciones ideales。</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACTO -->
+  <section class="contacto" id="contacto">
+    <h2>Contáctanos</h2>
+    <form class="contacto-form" action="mailto:info@autocomponentesmty.com" method="post" enctype="text/plain">
+      <input type="text" name="Nombre" placeholder="Tu nombre completo" required />
+      <input type="email" name="Email" placeholder="Tu correo electrónico" required />
+      <textarea name="Mensaje" rows="4" placeholder="Escribe tu mensaje aquí..." required></textarea>
+      <button type="submit">Enviar Mensaje</button>
+    </form>
+    <div class="btn-whatsapp">
+      <a href="https://wa.me/52XXXXXXXXXX?text=¡Hola!%20Quiero%20más%20info" target="_blank">
+        Contáctanos por WhatsApp
+      </a>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <p>Av. Ejemplo #123, Guadalupe, N.L. | Tel: (81) 1234-5678 | WhatsApp: (81) 9XXXXXXX</p>
+    <p>Email: info@autocomponentesmty.com</p>
+    <div class="redes">
+      <a href="https://facebook.com/tuempresa" target="_blank">Facebook</a> |
+      <a href="https://instagram.com/tuempresa" target="_blank">Instagram</a>
+    </div>
+    <p>© 2025 AutoComponentes Monterrey. Todos los derechos reservados。</p>
+  </footer>
+
+</body>
+</html>
