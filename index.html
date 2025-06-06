@@ -56,8 +56,7 @@
 
     /* -- Hero Section -- */
     .hero {
-      /* Aquí va tu imagen de portada; ajusta la ruta si la cambias de nombre o carpeta */
-      background: url('https://autocomponentes-mty.github.io/pagina/portada123.webp') center/cover no-repeat;
+      background: url('portada123.webp') center/cover no-repeat;
       height: 65vh;
       display: flex;
       align-items: center;
@@ -84,7 +83,13 @@
     }
     .hero p {
       font-size: 1.1rem;
-      margin-bottom: 1rem;
+      margin-bottom: 1.5rem;
+    }
+    .hero .buttons {
+      display: flex;
+      gap: 1rem;
+      justify-content: center;
+      flex-wrap: wrap;
     }
     .btn-primario {
       background: #27ae60;
@@ -97,6 +102,18 @@
     }
     .btn-primario:hover {
       background: #1e8c4a;
+    }
+    .btn-secundario {
+      background: #2980b9;
+      color: #fff;
+      padding: 0.75rem 1.5rem;
+      font-size: 1rem;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+    .btn-secundario:hover {
+      background: #1f638a;
     }
 
     /* -- Sección Servicios -- */
@@ -247,7 +264,7 @@
       background: #25d366;
     }
     .botones-contacto a.tiktok {
-      background: #000; /* Fondo negro típico de TikTok */
+      background: #000;
     }
     .botones-contacto a:hover {
       opacity: 0.9;
@@ -291,16 +308,14 @@
     <div class="content">
       <h1>AutoComponentes Monterrey</h1>
       <p>Encuentra partes originales y servicio exprés para mantener tu vehículo en marcha.</p>
-      <!-- “Ver Inventario” redirige directo a la pestaña Inventario de tu app clonada -->
-      <button 
-        class="btn-primario" 
-        onclick="window.location.href='https://autocomponentes-mty--zrn8.glide.page/inventario'">
-        Ver Inventario
-      </button>
+      <div class="buttons">
+        <button class="btn-primario" onclick="location.href='#inventario'">Ver Inventario</button>
+        <button class="btn-secundario" onclick="location.href='#contacto'">Contáctanos</button>
+      </div>
     </div>
   </section>
 
-  <!-- SERVICIOS -->
+  <!-- SERVICIOS (se quitó "Reparación de Suspensión" para que se vea más limpio) -->
   <section class="servicios" id="servicios">
     <h2>Nuestros Servicios</h2>
     <div class="cards">
@@ -348,12 +363,8 @@
         <p>Chevrolet Silverado 2018-2023</p>
       </div>
     </div>
-
-    <!-- Este enlace “Ver todo el Inventario →” también lleva a la pantalla Inventario -->
     <div class="ver-inventario">
-      <a href="https://autocomponentes-mty--zrn8.glide.page/inventario" target="_blank">
-        Ver todo el Inventario →
-      </a>
+      <a href="https://autocomponentes-mty--zrn8.glide.page" target="_blank">Ver todo el Inventario →</a>
     </div>
   </section>
 
@@ -399,4 +410,3 @@
 
 </body>
 </html>
-
