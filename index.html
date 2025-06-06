@@ -56,8 +56,8 @@
 
     /* -- Hero Section -- */
     .hero {
-      /* La ruta apunta a “portada123.webp” que está junto a este index.html */
-      background: url('portada123.webp') center/cover no-repeat;
+      /* Aquí va tu imagen de portada; ajusta la ruta si la cambias de nombre o carpeta */
+      background: url('https://autocomponentes-mty.github.io/pagina/portada123.webp') center/cover no-repeat;
       height: 65vh;
       display: flex;
       align-items: center;
@@ -286,16 +286,21 @@
     </nav>
   </header>
 
-  <!-- HERO: ahora muestra “portada123.webp” -->
+  <!-- HERO -->
   <section class="hero" id="inicio">
     <div class="content">
       <h1>AutoComponentes Monterrey</h1>
       <p>Encuentra partes originales y servicio exprés para mantener tu vehículo en marcha.</p>
-      <button class="btn-primario" onclick="location.href='#inventario'">Ver Inventario</button>
+      <!-- “Ver Inventario” redirige directo a la pestaña Inventario de tu app clonada -->
+      <button 
+        class="btn-primario" 
+        onclick="window.location.href='https://autocomponentes-mty--zrn8.glide.page/inventario'">
+        Ver Inventario
+      </button>
     </div>
   </section>
 
-  <!-- SERVICIOS (quitamos “Reparación de Suspensión” para que quede más limpio) -->
+  <!-- SERVICIOS -->
   <section class="servicios" id="servicios">
     <h2>Nuestros Servicios</h2>
     <div class="cards">
@@ -322,7 +327,7 @@
     </div>
   </section>
 
-  <!-- INVENTARIO DESTACADO (mostrando Producto y debajo Marca/Modelo/Año) -->
+  <!-- INVENTARIO DESTACADO -->
   <section class="inventario-destacado" id="inventario">
     <h2>Inventario Destacado</h2>
     <div class="grid-productos">
@@ -343,8 +348,12 @@
         <p>Chevrolet Silverado 2018-2023</p>
       </div>
     </div>
+
+    <!-- Este enlace “Ver todo el Inventario →” también lleva a la pantalla Inventario -->
     <div class="ver-inventario">
-      <a href="https://tu-app-glide.o-url-dinamico">Ver todo el Inventario →</a>
+      <a href="https://autocomponentes-mty--zrn8.glide.page/inventario" target="_blank">
+        Ver todo el Inventario →
+      </a>
     </div>
   </section>
 
@@ -370,14 +379,14 @@
     </div>
   </section>
 
-  <!-- CONTACTO (solo botones a redes sociales, incluyendo TikTok) -->
+  <!-- CONTACTO (solo botones a redes) -->
   <section class="contacto" id="contacto">
     <h2>Contáctanos</h2>
     <div class="botones-contacto">
-      <a class="facebook"  href="https://www.facebook.com/autocomponentes.monterrey" target="_blank">Facebook</a>
+      <a class="facebook" href="https://www.facebook.com/autocomponentes.monterrey" target="_blank">Facebook</a>
       <a class="instagram" href="https://www.instagram.com/autocomponentesmonterrey/" target="_blank">Instagram</a>
-      <a class="tiktok"    href="https://www.tiktok.com/@autocomponentesmo"  target="_blank">TikTok</a>
-      <a class="whatsapp"  href="https://wa.me/528130847980?text=¡Hola!%20Quisiera%20más%20información" target="_blank">WhatsApp</a>
+      <a class="tiktok" href="https://www.tiktok.com/@autocomponentesmo" target="_blank">TikTok</a>
+      <a class="whatsapp" href="https://wa.me/528130847980?text=¡Hola!%20Quisiera%20más%20información" target="_blank">WhatsApp</a>
     </div>
   </section>
 
@@ -390,3 +399,4 @@
 
 </body>
 </html>
+
