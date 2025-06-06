@@ -140,8 +140,8 @@
     }
     .grid-productos {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-      gap: 1rem;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 1.5rem;
     }
     .tarjeta-producto {
       background: #fff;
@@ -153,6 +153,11 @@
     .tarjeta-producto h4 {
       margin-bottom: 0.5rem;
       font-size: 1rem;
+      font-weight: bold;
+    }
+    .tarjeta-producto p {
+      font-size: 0.9rem;
+      color: #555;
     }
     .ver-inventario {
       display: block;
@@ -209,7 +214,7 @@
       color: #555;
     }
 
-    /* -- Sección Contacto (solo botones) -- */
+    /* -- Sección Contacto (solo botones a redes) -- */
     .contacto {
       padding: 4rem 2rem;
       text-align: center;
@@ -225,7 +230,6 @@
       flex-wrap: wrap;
     }
     .botones-contacto a {
-      background: #25d366;
       color: #fff;
       padding: 0.7rem 1.4rem;
       border-radius: 4px;
@@ -243,7 +247,6 @@
     }
     .botones-contacto a.tiktok {
       background: #000; /* Fondo negro típico de TikTok */
-      color: #fff;
     }
     .botones-contacto a:hover {
       opacity: 0.9;
@@ -259,14 +262,6 @@
     footer p {
       margin-bottom: 0.5rem;
       font-size: 0.9rem;
-    }
-    footer .redes a {
-      margin: 0 0.5rem;
-      color: #bbb;
-      font-size: 1.2rem;
-    }
-    footer .redes a:hover {
-      color: #fff;
     }
 
     @media (max-width: 600px) {
@@ -299,7 +294,7 @@
     </div>
   </section>
 
-  <!-- SERVICIOS -->
+  <!-- SERVICIOS (se quitó "Reparación de Suspensión" para que se vea más limpio) -->
   <section class="servicios" id="servicios">
     <h2>Nuestros Servicios</h2>
     <div class="cards">
@@ -323,10 +318,6 @@
         <h3>🔋 Cambio de Batería</h3>
         <p>Sustitución rápida de batería automotriz con garantías.</p>
       </div>
-      <div class="card-servicio">
-        <h3>🛠️ Reparación de Suspensión</h3>
-        <p>Cambio de amortiguadores y reparación de sistema de suspensión.</p>
-      </div>
     </div>
   </section>
 
@@ -335,16 +326,20 @@
     <h2>Inventario Destacado</h2>
     <div class="grid-productos">
       <div class="tarjeta-producto">
-        <h4>Cremallera EPS – FORD F-150 2010-2011</h4>
+        <h4>Cremallera EPS</h4>
+        <p>Ford F-150 2010-2011</p>
       </div>
       <div class="tarjeta-producto">
-        <h4>Cremallera EPS – VW VAG 2018-2020</h4>
+        <h4>Cremallera EPS</h4>
+        <p>VW VAG 2018-2020</p>
       </div>
       <div class="tarjeta-producto">
-        <h4>Cremallera EPS – FORD MUSTANG 2016-2020</h4>
+        <h4>Cremallera EPS</h4>
+        <p>Ford Mustang 2016-2020</p>
       </div>
       <div class="tarjeta-producto">
-        <h4>Cremallera EPS – CHEVROLET SILVERADO 2018-2023</h4>
+        <h4>Cremallera EPS</h4>
+        <p>Chevrolet Silverado 2018-2023</p>
       </div>
     </div>
     <div class="ver-inventario">
@@ -389,14 +384,8 @@
   <footer>
     <p>Dirección: Playa Mocambo 3547, La Primavera, 64830 Monterrey, N.L.</p>
     <p>Tel: +52 81 3084 7980 | Email: <a href="mailto:autocomponentesmty@gmail.com">autocomponentesmty@gmail.com</a></p>
-    <div class="redes">
-      <a href="https://www.facebook.com/autocomponentes.monterrey" target="_blank">Facebook</a> |
-      <a href="https://www.instagram.com/autocomponentesmonterrey/" target="_blank">Instagram</a> |
-      <a href="https://www.tiktok.com/@autocomponentesmo" target="_blank">TikTok</a>
-    </div>
     <p>© 2025 AutoComponentes Monterrey. Todos los derechos reservados.</p>
   </footer>
 
 </body>
 </html>
-
